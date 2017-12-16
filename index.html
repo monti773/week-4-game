@@ -5,95 +5,35 @@
 	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style.css">
-<!-- <style>
-.container {
-    background-color: lightblue;
-}
 
-div {
-	background-color: red;
-}
-</style>
- -->
+
+
 </head>
 
+
 <body>
-	<div class="page-header">
- 	 <h1>HEADER</h1>
-	</div>
 
-	<div class="container">	
-	<div class="row">
-		<div class="col-lg-6 fcol">
-		<h1>First column</h1>
 
-		<div class="col-md-12 tex">
-			
-	</div>
-		</div>
-			<div class="col-lg-6 fcol">Second
-			</div>
-		</div>
+Name: <input type="text" name="fullname"><br>
+Email: <input type="text" name="email">
 
-	</div>
+	<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
+</script>
+
+
 
 
 </body>
-
-	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-<!-- </head>
-<body>
-	<nav bar>
-	<p>	N</p>
-	</nav>
- <div class="container">
- 	<p>article</p>
-	
-	<div class="box">
-		<p>B</p>
-
-		<div class="box2">
-			<p>b</p>
-		</div>
-	<section id="low">
-		<br>
-	</section>
-
-	<footer>
-    &lt;footer&gt; #ccc
-  </footer>
-  
-	</div>
-	
- </div>
-
- <div class="container2">
- 	<p>article</p>
-	
-	<div class="box">
-		<p>B</p>
-
-		<div class="box2">
-			<p>b</p>
-		</div>
-	<section id="low">
-		<br>
-	</section>
-
-	<footer>
-    &lt;footer&gt; #ccc
-
-  </footer>
-  
-	</div>
-	
- </div>
- <p>.</p>
- 
-
-<footer>
-    footer
-  </footer> -->
-
-</body>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="assets/javascript/game.js"></script>
 </html>
