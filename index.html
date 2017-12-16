@@ -6,34 +6,63 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style.css">
 
-
-
 </head>
-
 
 <body>
 
+	<h1>pick a LETTER</title>
+		<h2> Each letter is assigned a number. Get to 39 without going over and you win! Go over and suffer the consequences!<h2>
+	<h2>Type "A" to honk, "B" to drive to work, "C" to drive around the world, or "D" to get a tuneup.</h2>
 
-Name: <input type="text" name="fullname"><br>
-Email: <input type="text" name="email">
+		<button type="buttonA" class="btn btn-lg btn-success">A</button>
+        <button type="buttonB" class="btn btn-lg btn-info">B</button>
+        <button type="buttonC" class="btn btn-lg btn-warning">C</button>
+        <button type="buttonD" class="btn btn-lg btn-danger">D</button>
+	
 
-	<script>
-$(document).ready(function(){
-    $("input").focus(function(){
-        $(this).css("background-color", "#cccccc");
-    });
-    $("input").blur(function(){
-        $(this).css("background-color", "#ffffff");
-    });
-});
+
+<script type="text/javascript">
+	var car = {
+		make: "honda",
+		model:"fit",
+		color:"bluebrery",
+		mileage: 3000,
+		isWorking: true,
+	}
+		honk: fuction(){
+			alert("hoooook");
+		},
+		driveToWork: function(){
+			alert("old mieage: " + car.mileage);
+
+			car.mileage = car.mileage + 8;
+			alert("new mileage: (ahshh I got myself a new ca ")  + car.mileage);
+		}
+	}
+
+	car.honk();
+
+
+
+
+	// for (var i=1; i<101; i++){
+	// 	var output = "";
+
+	// 	if (i%3 === 0){
+	// 		output += "fizz";
+	// 	}
+	// 	if (i%5 === 0){
+	// 		output+= "buzz";
+	// 	}
+	// 	if (output === ""){
+	// 		output = i;
+	// 	}
+	// 	console.log(output);
+	// }
+
+
 </script>
 
-
-
-
 </body>
-<script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="assets/javascript/game.js"></script>
+
 </html>
