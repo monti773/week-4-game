@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="style.css">
 
+<head>
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 </head>
 
 <body>
-
-	<h1>pick a LETTER</title>
+    <h1>pick a LETTER</title>
 		<h2> Each letter is assigned a number. Get to 39 without going over and you win! Go over and suffer the consequences!<h2>
 	<h2>Click on: A, B, C, or D</h2>
-
-		<button type="buttonA" class="btn btn-lg btn-success">A</button>
-        <button type="buttonB" class="btn btn-lg btn-info">B</button>
-        <button type="buttonC" class="btn btn-lg btn-warning">C</button>
-        <button type="buttonD" class="btn btn-lg btn-danger">D</button>
 	
+    <button id="buttonA" class="btn btn-lg btn-success number" value="2">A</button>
+    <button id="buttonB" class="btn btn-lg btn-info number" value="3">B</button>
+    <button id="buttonC" class="btn btn-lg btn-warning number" value="7">C</button>
+    <button id="buttonD" class="btn btn-lg btn-danger number" value="20">D</button>
+    
+	<h1 id="display"></h1>
+
+    <script type="text/javascript">
 
 
-<script type="text/javascript">
-	var letters = ["A", "B", "C", "D"]
+    $(document).ready(function() {
 
-	randomIndex = Math.floor(Math.random()* letters.length);
-	randomNum = letters[randomIndex];
-	alert(randomNum);
+        var letters = ["2", "3", "7", "20"]
+        var currentScore = 0;
+        var ssum = "";
+        var operator;
 
-
-	// for (var i=1; i<101; i++){
-	// 	var output = "";
-
-	// 	if (i%3 === 0){
-	// 		output += "fizz";
-	// 	}
-	// 	if (i%5 === 0){
-	// 		output+= "buzz";
-	// 	}
-	// 	if (output === ""){
-	// 		output = i;
-	// 	}
-	// 	console.log(output);
-	// }
+        randomIndex = Math.floor(Math.random() * letters.length);
+        randomNum = letters[randomIndex];
 
 
-</script>
-
+        $(".number").on("click", function() {
+            var button = $(this);
+            if(operator === undefined){
+            ssum += button.val();
+            $("#display").text(ssum);
+        }
+        });
+        // $(".equal").on("click", function() {});
+        // $(".clear").on("click", function(){});
+    });
+    </script>
 </body>
 
 </html>
